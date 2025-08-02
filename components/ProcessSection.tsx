@@ -58,10 +58,10 @@ const ProcessSection = () => {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: 'easeOut',
+        ease: [0.4, 0, 0.2, 1], // Using cubic-bezier values for ease-out
       },
     },
-  };
+  } as const;
 
   return (
     <section ref={ref} className="py-20 bg-gray-50">
