@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { MapPin, Phone, Mail, Clock, Star } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Star, Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -10,9 +10,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">F</span>
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="w-10 h-10 flex items-center justify-center">
+                <img 
+                  src="/images/Foxy-logo-v1.svg" 
+                  alt="Foxy Home Buyer Logo" 
+                  className="h-full w-auto"
+                />
               </div>
               <div>
                 <div className="font-display font-bold text-xl">
@@ -32,6 +36,64 @@ const Footer = () => {
                 ))}
               </div>
               <span className="text-sm text-gray-300 ml-2">BBB A+ Rating</span>
+            </div>
+            <div className="mt-6">
+              <h4 className="text-sm font-medium text-gray-200 mb-3">Connect With Us</h4>
+              <div className="flex space-x-2">
+                {[
+                  { 
+                    href: 'https://facebook.com', 
+                    icon: <Facebook className="w-5 h-5" />, 
+                    label: 'Facebook',
+                    color: 'hover:bg-blue-600 hover:border-blue-600 hover:scale-110',
+                    border: 'border-blue-500/20',
+                    text: 'text-blue-400 hover:text-white'
+                  },
+                  { 
+                    href: 'https://twitter.com', 
+                    icon: <Twitter className="w-5 h-5" />, 
+                    label: 'Twitter',
+                    color: 'hover:bg-blue-400 hover:border-blue-400 hover:scale-110',
+                    border: 'border-blue-400/20',
+                    text: 'text-blue-400 hover:text-white'
+                  },
+                  { 
+                    href: 'https://instagram.com', 
+                    icon: <Instagram className="w-5 h-5" />, 
+                    label: 'Instagram',
+                    color: 'hover:bg-gradient-to-r hover:from-pink-600 hover:to-purple-600 hover:border-pink-600 hover:scale-110',
+                    border: 'border-pink-500/20',
+                    text: 'text-pink-400 hover:text-white'
+                  },
+                  { 
+                    href: 'https://linkedin.com', 
+                    icon: <Linkedin className="w-5 h-5" />, 
+                    label: 'LinkedIn',
+                    color: 'hover:bg-blue-700 hover:border-blue-700 hover:scale-110',
+                    border: 'border-blue-600/20',
+                    text: 'text-blue-500 hover:text-white'
+                  },
+                  { 
+                    href: 'https://youtube.com', 
+                    icon: <Youtube className="w-5 h-5" />, 
+                    label: 'YouTube',
+                    color: 'hover:bg-red-600 hover:border-red-600 hover:scale-110',
+                    border: 'border-red-500/20',
+                    text: 'text-red-500 hover:text-white'
+                  },
+                ].map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Visit our ${social.label} page`}
+                    className={`flex items-center justify-center w-10 h-10 rounded-full border-2 ${social.border} ${social.text} ${social.color} transition-all duration-300 transform hover:shadow-lg`}
+                  >
+                    {social.icon}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
 

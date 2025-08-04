@@ -71,17 +71,21 @@ const Header = () => {
           {/* Logo - Always clickable home navigation */}
           <Link 
             href="/" 
-            className="flex items-center space-x-3 hover:opacity-80 transition-opacity group"
+            className="flex items-center space-x-2 hover:opacity-90 transition-opacity group"
           >
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform">
-              <span className="text-white font-bold text-xl">F</span>
+            <div className="w-30 h-10 flex items-center justify-center group-hover:scale-105 transition-transform">
+              <img 
+                src="images/logo.svg" 
+                alt="Foxy Home Buyer Logo" 
+                className="h-full w-30"
+              />
             </div>
-            <div className="hidden sm:block">
+            {/* <div className="hidden sm:block">
               <div className="font-display font-bold text-xl text-gray-900">
-                Foxy Home Buyer
+                Home Buyer
               </div>
               <div className="text-xs text-gray-600">Florida Cash Buyers</div>
-            </div>
+            </div> */}
           </Link>
 
           {/* Desktop Navigation - Essential links only (no wrapping) */}
