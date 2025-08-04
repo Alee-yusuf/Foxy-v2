@@ -40,9 +40,9 @@ const Footer = () => {
             <div className="mt-6">
               <h4 className="text-sm font-medium text-gray-200 mb-3">Connect With Us</h4>
               <div className="flex space-x-2">
-                {[
+                {[ 
                   { 
-                    href: 'https://facebook.com', 
+                    href: 'https://www.facebook.com/FoxyHomeBuyer', 
                     icon: <Facebook className="w-5 h-5" />, 
                     label: 'Facebook',
                     color: 'hover:bg-blue-600 hover:border-blue-600 hover:scale-110',
@@ -50,15 +50,7 @@ const Footer = () => {
                     text: 'text-blue-400 hover:text-white'
                   },
                   { 
-                    href: 'https://twitter.com', 
-                    icon: <Twitter className="w-5 h-5" />, 
-                    label: 'Twitter',
-                    color: 'hover:bg-blue-400 hover:border-blue-400 hover:scale-110',
-                    border: 'border-blue-400/20',
-                    text: 'text-blue-400 hover:text-white'
-                  },
-                  { 
-                    href: 'https://instagram.com', 
+                    href: 'https://www.instagram.com/foxyhomebuyer/', 
                     icon: <Instagram className="w-5 h-5" />, 
                     label: 'Instagram',
                     color: 'hover:bg-gradient-to-r hover:from-pink-600 hover:to-purple-600 hover:border-pink-600 hover:scale-110',
@@ -66,20 +58,20 @@ const Footer = () => {
                     text: 'text-pink-400 hover:text-white'
                   },
                   { 
-                    href: 'https://linkedin.com', 
-                    icon: <Linkedin className="w-5 h-5" />, 
-                    label: 'LinkedIn',
-                    color: 'hover:bg-blue-700 hover:border-blue-700 hover:scale-110',
-                    border: 'border-blue-600/20',
-                    text: 'text-blue-500 hover:text-white'
-                  },
-                  { 
-                    href: 'https://youtube.com', 
+                    href: 'https://www.youtube.com/@FoxyHomeBuyer', 
                     icon: <Youtube className="w-5 h-5" />, 
                     label: 'YouTube',
                     color: 'hover:bg-red-600 hover:border-red-600 hover:scale-110',
                     border: 'border-red-500/20',
                     text: 'text-red-500 hover:text-white'
+                  },
+                  { 
+                    href: '#', 
+                    icon: <Linkedin className="w-5 h-5" />, 
+                    label: 'LinkedIn',
+                    color: 'hover:bg-blue-700 hover:border-blue-700 hover:scale-110',
+                    border: 'border-blue-600/20',
+                    text: 'text-blue-500 hover:text-white'
                   },
                 ].map((social, index) => (
                   <a
