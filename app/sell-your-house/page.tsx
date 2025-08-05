@@ -50,7 +50,7 @@ export default function SellYourHouse() {
 
   // Initialize EmailJS
   useEffect(() => {
-    emailjs.init('fnFfz0JfF_jUR96K6'); // Public Key
+    emailjs.init('T3-K_8lBqbYnil6Mm'); // Public Key
   }, []);
 
   const handleInputChange = (field: string, value: string) => {
@@ -124,8 +124,8 @@ export default function SellYourHouse() {
       };
 
       await emailjs.send(
-        'service_wp3vz56', // Service ID
-        'template_lvrmrqi', // Template ID for property lead
+        'service_zqbw31o', // Service ID
+        'template_rnlnn5g', // Template ID for property lead
         templateParams
       );
 

@@ -28,7 +28,7 @@ export default function Contact() {
 
   // Initialize EmailJS
   useEffect(() => {
-    emailjs.init('fnFfz0JfF_jUR96K6'); // Public Key
+    emailjs.init('T3-K_8lBqbYnil6Mm'); // Public Key
   }, []);
 
   const handleInputChange = (field: string, value: string) => {
@@ -62,8 +62,8 @@ export default function Contact() {
       };
 
       await emailjs.send(
-        'service_wp3vz56', // Service ID
-        'template_gyp5hi3', // Template ID for quick contact
+        'service_zqbw31o', // Service ID
+        'template_3dq7mm9', // Template ID for quick contact
         templateParams
       );
 
