@@ -2,13 +2,14 @@
 
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
+import emailjs from '@emailjs/browser';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Shield, Clock, CheckCircle, Upload, Star, Phone, DollarSign } from 'lucide-react';
+import { Shield, Clock, CheckCircle, Upload, Star, Phone, DollarSign, Loader2, AlertCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function SellYourHouse() {
@@ -42,14 +43,42 @@ export default function SellYourHouse() {
   }, [searchParams]);
 
   const totalSteps = 3;
+  
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  // Initialize EmailJS
+  useEffect(() => {
+    emailjs.init('fnFfz0JfF_jUR96K6'); // Public Key
+  }, []);
 
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
+  const validateStep = (step: number): boolean => {
+    switch (step) {
+      case 1:
+        return !!(formData.address && formData.city && formData.zipCode && formData.propertyType);
+      case 2:
+        return !!(formData.bedrooms && formData.bathrooms && formData.condition && formData.situation && formData.timeline);
+      case 3:
+        return !!(formData.firstName && formData.lastName && formData.email && formData.phone);
+      default:
+        return true;
+    }
+  };
+
   const nextStep = () => {
     if (currentStep < totalSteps) {
-      setCurrentStep(currentStep + 1);
+      if (validateStep(currentStep)) {
+        setCurrentStep(currentStep + 1);
+        setSubmitStatus('idle'); // Reset any previous error messages
+      } else {
+        setSubmitStatus('error');
+        setErrorMessage('Please fill in all required fields before proceeding to the next step.');
+      }
     }
   };
 
@@ -59,10 +88,79 @@ export default function SellYourHouse() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission logic here
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+    setErrorMessage('');
+
+    try {
+      // EmailJS configuration for property lead
+      const templateParams = {
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        phone: formData.phone,
+        address: formData.address,
+        city: formData.city,
+        zipCode: formData.zipCode,
+        propertyType: formData.propertyType,
+        bedrooms: formData.bedrooms,
+        bathrooms: formData.bathrooms,
+        sqft: formData.sqft,
+        yearBuilt: formData.yearBuilt,
+        condition: formData.condition,
+        situation: formData.situation,
+        timeline: formData.timeline,
+        additionalInfo: formData.additionalInfo,
+        submission_time: new Date().toLocaleString('en-US', {
+          timeZone: 'America/New_York',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit'
+        })
+      };
+
+      await emailjs.send(
+        'service_wp3vz56', // Service ID
+        'template_lvrmrqi', // Template ID for property lead
+        templateParams
+      );
+
+      setSubmitStatus('success');
+      
+      // Reset form after showing success message (with delay)
+      setTimeout(() => {
+        setFormData({
+          address: '',
+          city: '',
+          zipCode: '',
+          propertyType: '',
+          bedrooms: '',
+          bathrooms: '',
+          sqft: '',
+          yearBuilt: '',
+          condition: '',
+          situation: '',
+          timeline: '',
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          additionalInfo: ''
+        });
+        setCurrentStep(1); // Reset to first step
+        setSubmitStatus('idle'); // Reset status after delay
+      }, 5000); // 5 seconds delay
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      setSubmitStatus('error');
+      setErrorMessage('Failed to submit your information. Please try again or call us directly at (813) 555-CASH.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -261,6 +359,23 @@ export default function SellYourHouse() {
                               </Select>
                             </div>
 
+                            {/* Error Message for Step 1 */}
+                            {submitStatus === 'error' && currentStep === 1 && (
+                              <motion.div
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                className="bg-red-50 border border-red-200 rounded-lg p-4 mb-4"
+                              >
+                                <div className="flex items-center">
+                                  <AlertCircle className="w-5 h-5 text-red-500 mr-3" />
+                                  <div>
+                                    <h4 className="font-semibold text-red-800">Required Fields Missing</h4>
+                                    <p className="text-red-700 text-sm">{errorMessage}</p>
+                                  </div>
+                                </div>
+                              </motion.div>
+                            )}
+
                             <div className="flex justify-end">
                               <Button
                                 type="button"
@@ -357,6 +472,23 @@ export default function SellYourHouse() {
                               />
                             </div>
 
+                            {/* Error Message for Step 2 */}
+                            {submitStatus === 'error' && currentStep === 2 && (
+                              <motion.div
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                className="bg-red-50 border border-red-200 rounded-lg p-4 mb-4"
+                              >
+                                <div className="flex items-center">
+                                  <AlertCircle className="w-5 h-5 text-red-500 mr-3" />
+                                  <div>
+                                    <h4 className="font-semibold text-red-800">Required Fields Missing</h4>
+                                    <p className="text-red-700 text-sm">{errorMessage}</p>
+                                  </div>
+                                </div>
+                              </motion.div>
+                            )}
+
                             <div className="flex justify-between">
                               <Button
                                 type="button"
@@ -442,17 +574,63 @@ export default function SellYourHouse() {
                               />
                             </div>
 
-                            <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                              <div className="flex items-center">
-                                <CheckCircle className="w-5 h-5 text-green-600 mr-3" />
-                                <div>
-                                  <h3 className="font-semibold text-green-800">What happens next?</h3>
-                                  <p className="text-green-700 text-sm">
-                                    We'll review your information and call you within 24 hours with a fair cash offer.
-                                  </p>
+                            {/* Success Message */}
+                            {submitStatus === 'success' && (
+                              <motion.div
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                className="bg-green-50 border border-green-200 rounded-lg p-6 mb-4"
+                              >
+                                <div className="flex items-center">
+                                  <CheckCircle className="w-6 h-6 text-green-500 mr-4" />
+                                  <div>
+                                    <h3 className="font-bold text-green-800 text-lg">Property Information Submitted!</h3>
+                                    <p className="text-green-700">
+                                      🎉 We've received your property details and will contact you within 24 hours with a cash offer!
+                                    </p>
+                                  </div>
+                                </div>
+                              </motion.div>
+                            )}
+
+                            {/* Error Message */}
+                            {submitStatus === 'error' && (
+                              <motion.div
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                className="bg-red-50 border border-red-200 rounded-lg p-6 mb-4"
+                              >
+                                <div className="flex items-center">
+                                  <AlertCircle className="w-6 h-6 text-red-500 mr-4" />
+                                  <div>
+                                    <h3 className="font-bold text-red-800 text-lg">Submission Failed</h3>
+                                    <p className="text-red-700 mb-2">{errorMessage}</p>
+                                    <Button
+                                      size="sm"
+                                      variant="outline"
+                                      className="border-red-300 text-red-700 hover:bg-red-50"
+                                      asChild
+                                    >
+                                      <a href="tel:+18135552274">Call (813) 555-CASH Now</a>
+                                    </Button>
+                                  </div>
+                                </div>
+                              </motion.div>
+                            )}
+
+                            {submitStatus === 'idle' && (
+                              <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                                <div className="flex items-center">
+                                  <CheckCircle className="w-5 h-5 text-green-600 mr-3" />
+                                  <div>
+                                    <h3 className="font-semibold text-green-800">What happens next?</h3>
+                                    <p className="text-green-700 text-sm">
+                                      We'll review your information and call you within 24 hours with a fair cash offer.
+                                    </p>
+                                  </div>
                                 </div>
                               </div>
-                            </div>
+                            )}
 
                             <div className="flex justify-between">
                               <Button
@@ -460,14 +638,23 @@ export default function SellYourHouse() {
                                 onClick={prevStep}
                                 variant="outline"
                                 className="px-8 py-3"
+                                disabled={isSubmitting}
                               >
                                 ← Previous
                               </Button>
                               <Button
                                 type="submit"
-                                className="cta-gradient text-white px-8 py-3 animate-pulse-glow"
+                                disabled={isSubmitting}
+                                className="cta-gradient text-white px-8 py-3 animate-pulse-glow disabled:opacity-50 disabled:cursor-not-allowed"
                               >
-                                Get My Cash Offer
+                                {isSubmitting ? (
+                                  <>
+                                    <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                                    Submitting...
+                                  </>
+                                ) : (
+                                  'Get My Cash Offer'
+                                )}
                               </Button>
                             </div>
                           </motion.div>

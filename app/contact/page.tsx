@@ -1,13 +1,14 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Phone, Mail, MapPin, Clock, MessageCircle, CheckCircle } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, MessageCircle, CheckCircle, Loader2, AlertCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Contact() {
@@ -20,15 +21,70 @@ export default function Contact() {
     contactMethod: '',
     message: ''
   });
+  
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  // Initialize EmailJS
+  useEffect(() => {
+    emailjs.init('fnFfz0JfF_jUR96K6'); // Public Key
+  }, []);
 
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Contact form submitted:', formData);
-    // Handle form submission logic here
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+    setErrorMessage('');
+
+    try {
+      // EmailJS configuration
+      const templateParams = {
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        phone: formData.phone,
+        propertyAddress: formData.propertyAddress,
+        contactMethod: formData.contactMethod,
+        message: formData.message,
+        submission_time: new Date().toLocaleString('en-US', {
+          timeZone: 'America/New_York',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit'
+        })
+      };
+
+      await emailjs.send(
+        'service_wp3vz56', // Service ID
+        'template_gyp5hi3', // Template ID for quick contact
+        templateParams
+      );
+
+      setSubmitStatus('success');
+      // Reset form after successful submission
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        propertyAddress: '',
+        contactMethod: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      setSubmitStatus('error');
+      setErrorMessage('Failed to send message. Please try again or call us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactMethods = [
@@ -276,12 +332,54 @@ export default function Contact() {
                       />
                     </div>
 
+                    {/* Success Message */}
+                    {submitStatus === 'success' && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="bg-green-50 border border-green-200 rounded-lg p-4 mb-4"
+                      >
+                        <div className="flex items-center">
+                          <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                          <div>
+                            <h4 className="font-semibold text-green-800">Message Sent Successfully!</h4>
+                            <p className="text-green-700 text-sm">We'll contact you within 24 hours using your preferred method.</p>
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+
+                    {/* Error Message */}
+                    {submitStatus === 'error' && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="bg-red-50 border border-red-200 rounded-lg p-4 mb-4"
+                      >
+                        <div className="flex items-center">
+                          <AlertCircle className="w-5 h-5 text-red-500 mr-3" />
+                          <div>
+                            <h4 className="font-semibold text-red-800">Message Failed to Send</h4>
+                            <p className="text-red-700 text-sm">{errorMessage}</p>
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+
                     <Button
                       type="submit"
                       size="lg"
-                      className="w-full cta-gradient text-white py-4 text-lg animate-pulse-glow"
+                      disabled={isSubmitting}
+                      className="w-full cta-gradient text-white py-4 text-lg animate-pulse-glow disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      Send Message
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                          Sending Message...
+                        </>
+                      ) : (
+                        'Send Message'
+                      )}
                     </Button>
 
                     <p className="text-sm text-gray-500 text-center">
