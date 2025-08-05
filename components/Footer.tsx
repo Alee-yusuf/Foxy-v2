@@ -11,19 +11,19 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 flex items-center justify-center">
+              <div className="w-30 h-10 flex items-center justify-center">
                 <img 
-                  src="/images/Foxy-logo-v1.svg" 
+                  src="/images/logo.svg" 
                   alt="Foxy Home Buyer Logo" 
-                  className="h-full w-auto"
+                  className="h-full w-30"
                 />
               </div>
-              <div>
+              {/* <div>
                 <div className="font-display font-bold text-xl">
                   Foxy Home Buyer
                 </div>
                 <div className="text-sm text-gray-400">Florida Cash Buyers</div>
-              </div>
+              </div> */}
             </div>
             <p className="text-gray-300 mb-4">
               Florida's most trusted cash home buyer. We buy houses in any condition, 

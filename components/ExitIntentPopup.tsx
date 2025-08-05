@@ -10,15 +10,24 @@ const ExitIntentPopup = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
+  const [hasShown, setHasShown] = useState(false);
 
   useEffect(() => {
-    let hasShown = localStorage.getItem('exitIntentShown');
-    if (hasShown) return;
+    // Check if popup was shown before
+    const wasShown = localStorage.getItem('exitIntentShown');
+    if (wasShown === 'true') {
+      setHasShown(true);
+      return;
+    }
 
     const handleMouseLeave = (e: MouseEvent) => {
-      if (e.clientY <= 0) {
+      // Only show if mouse is moving towards the top of the window and hasn't been shown before
+      if (e.clientY <= 0 && !hasShown) {
         setIsVisible(true);
+        setHasShown(true);
         localStorage.setItem('exitIntentShown', 'true');
+        // Remove the event listener after showing once
+        document.removeEventListener('mouseleave', handleMouseLeave);
       }
     };
 
