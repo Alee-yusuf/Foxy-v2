@@ -39,63 +39,63 @@ export default function Reviews() {
 
   const writtenTestimonials = [
     {
-      name: 'Mike Thompson',
-      location: 'Riverview, FL',
+      name: 'Pamela Whitlock',
+      location: 'Florida',
       rating: 5,
-      date: '2 weeks ago',
-      situation: 'As-Is Sale',
-      amount: '$278,000',
-      text: "My house had serious foundation issues and needed a new roof. Other buyers wanted me to fix everything first, but Foxy bought it exactly as-is. No repairs, no hassle, just a fair cash offer and quick closing.",
-      image: 'https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop'
+      date: '3 weeks ago',
+      situation: 'Realtor Partnership',
+      amount: '',
+      text: "As a realtor, I have not worked with an investor in the past and so I was a little hesitant at first. After working with Damon Hart at Foxy Homes, I have a new perspective on working with investor partners. Damon made the transaction go smoothly. He was always available to answer all my questions for my clients and very knowledgeable. In the future, if I have another client in need, I will definitely give Damon at Foxy Homes a call.",
+      image: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop'
     },
     {
-      name: 'Lisa Chen',
-      location: 'Brandon, FL',
+      name: 'Patrick Piper',
+      location: 'Florida',
       rating: 5,
       date: '1 month ago',
-      situation: 'Divorce Settlement',
-      amount: '$195,500',
-      text: "Going through a divorce and needed to sell quickly. Foxy was professional, discreet, and closed in exactly 7 days like they promised. The $2,500 guarantee gave me peace of mind during a stressful time.",
+      situation: 'Home Inspection',
+      amount: '',
+      text: "Damon Hart was an absolute pleasure to work with during their home insurance inspection. His genuine 'Go Getter' work ethics, professionalism, attentiveness, and appreciation for thorough service made the process seamless.",
+      image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop'
+    },
+    {
+      name: 'Pamela Meyer',
+      location: 'Florida',
+      rating: 5,
+      date: '3 weeks ago',
+      situation: 'Property Sale',
+      amount: '',
+      text: "Had a great experience working with Foxy Home Buyer on selling a property. They were really great and quick to respond to all calls and emails. They had everything put together, and made the process smooth from start to finish. Would definitely recommend working with them if you get the chance!",
+      image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop'
+    },
+    {
+      name: 'Fanny Horn',
+      location: 'Suncoast, FL',
+      rating: 5,
+      date: '3 weeks ago',
+      situation: 'Professional Transaction',
+      amount: '',
+      text: "Foxy Home Buyer knows what they are doing! They moved quickly, are organized and professionals. We went through every steps smoothly and closing was seamless. It's not every day you get a transaction that goes this well. I am looking forward to the next one! Well done!",
       image: 'https://images.pexels.com/photos/1181424/pexels-photo-1181424.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop'
     },
     {
-      name: 'David Martinez',
-      location: 'Lakeland, FL',
+      name: 'Jenny Quiceno',
+      location: 'Florida',
       rating: 5,
-      date: '3 weeks ago',
-      situation: 'Tired of Being Landlord',
-      amount: '$165,000',
-      text: "Had rental property with problem tenants. Foxy bought it with tenants in place and handled the whole transition. Finally free from landlord headaches and got a fair price too.",
+      date: '1 month ago',
+      situation: 'Home Purchase',
+      amount: '',
+      text: "We recently purchased one of their homes through our Realtor and it was an excellent value. The home has become a comfort zone for my mom—she absolutely loves it! On top of that, it's proved to be a fantastic long‑term investment. Highly recommend!",
       image: 'https://images.pexels.com/photos/1212984/pexels-photo-1212984.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop'
     },
     {
-      name: 'Susan Williams',
-      location: 'Plant City, FL',
+      name: 'Charity Brooks',
+      location: 'Florida',
       rating: 5,
       date: '2 months ago',
-      situation: 'Financial Hardship',
-      amount: '$142,800',
-      text: "Lost my job and couldn't afford the mortgage anymore. Foxy was understanding and compassionate. They helped me avoid foreclosure and saved my credit. I'm so grateful for their help.",
-      image: 'https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop'
-    },
-    {
-      name: 'James Wilson',
-      location: 'Tampa, FL',
-      rating: 5,
-      date: '1 month ago',
-      situation: 'Quick Sale Needed',
-      amount: '$389,200',
-      text: "Needed to sell fast due to health issues in the family. Foxy closed in 6 days - faster than they even promised! Professional team and fair offer. Would definitely recommend to anyone.",
-      image: 'https://images.pexels.com/photos/1212805/pexels-photo-1212805.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop'
-    },
-    {
-      name: 'Carol Patterson',
-      location: 'Clearwater, FL',
-      rating: 5,
-      date: '3 months ago',
-      situation: 'Downsizing',
-      amount: '$267,500',
-      text: "Empty nesters looking to downsize. Foxy made the process so simple - no showings, no repairs, no waiting for buyers. Got a great offer and closed on our timeline. Perfect solution for us.",
+      situation: 'First Time Seller',
+      amount: '',
+      text: "As a first time home seller I didn't know where to turn to sell. Had companies sending mail saying they would buy and I was unclear. Foxy home buyers have talked me through steps and made an offer. From day one Damon had been right there to answer any questions I might have and/or something I needed clarifying. I would recommend Foxy to my friends and family. Great team members who are professional, polite, and friendly.",
       image: 'https://images.pexels.com/photos/1181717/pexels-photo-1181717.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop'
     }
   ];
