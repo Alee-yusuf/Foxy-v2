@@ -18,7 +18,7 @@ export default function HowItWorks() {
         'Your timeline and goals',
         'Any specific circumstances'
       ],
-      timeframe: '5 minutes'
+      timeframe: '3 minutes'
     },
     {
       number: 2,
