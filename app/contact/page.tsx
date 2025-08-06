@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Phone, Mail, MapPin, Clock, MessageCircle, CheckCircle, Loader2, AlertCircle } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, MessageCircle, CheckCircle, Loader2, AlertCircle, MessageSquare } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Contact() {
@@ -92,28 +92,38 @@ export default function Contact() {
       icon: Phone,
       title: 'Call Us',
       subtitle: 'Speak with our team',
-      info: '(813) 555-CASH',
+      info: '+1 (866) 404-3664',
       description: 'Available 24/7 for immediate assistance',
-      action: 'tel:+18135552274',
+      action: 'tel:+18664043664',
       buttonText: 'Call Now'
     },
     {
       icon: MessageCircle,
       title: 'Text Us',
       subtitle: 'Quick text message',
-      info: '(813) 555-2274',
+      info: '+1 (866) 404-3664',
       description: 'Fast response via SMS',
-      action: 'sms:+18135552274',
+      action: 'sms:+18664043664',
       buttonText: 'Send Text'
     },
     {
       icon: Mail,
       title: 'Email Us',
       subtitle: 'Send us a message',
-      info: 'offers@foxyhomebuyer.com',
+      info: 'info@foxyhomebuyer.com',
       description: 'We respond within 2 hours',
-      action: 'mailto:offers@foxyhomebuyer.com',
+      action: 'mailto:info@foxyhomebuyer.com',
       buttonText: 'Send Email'
+    },
+    // Hidden for now - will be implemented next
+    {
+      icon: MessageSquare,
+      title: 'Live Chat',
+      subtitle: 'Chat with us now',
+      info: 'Available 24/7',
+      description: 'Instant response via live chat',
+      action: '#',
+      buttonText: 'Start Chat'
     }
   ];
 
@@ -286,7 +296,7 @@ export default function Contact() {
                           type="tel"
                           value={formData.phone}
                           onChange={(e) => handleInputChange('phone', e.target.value)}
-                          placeholder="(813) 555-0123"
+                          placeholder="(866) 404-3664"
                           required
                         />
                       </div>
@@ -457,7 +467,7 @@ export default function Contact() {
           </div>
         </section>
 
-        {/* Emergency Contact */}
+        {/* Emergency Contact
         <section className="py-16 bg-red-50">
           <div className="container mx-auto px-4">
             <motion.div
@@ -486,7 +496,7 @@ export default function Contact() {
               </div>
             </motion.div>
           </div>
-        </section>
+        </section> */}
       </main>
       <Footer />
     </>

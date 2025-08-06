@@ -13,9 +13,9 @@ const Footer = () => {
             <div className="flex items-center space-x-3 mb-4">
               <div className="w-30 h-10 flex items-center justify-center">
                 <img 
-                  src="/images/logo.svg" 
+                  src="/images/foxy-logo.svg" 
                   alt="Foxy Home Buyer Logo" 
-                  className="h-full w-30"
+                  className="h-full w-50"
                 />
               </div>
               {/* <div>
@@ -139,21 +139,21 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-blue-400" />
                 <div>
-                  <div className="font-semibold">(813) 555-CASH</div>
+                  <div className="font-semibold">+1 (866) 404-3664</div>
                   <div className="text-sm text-gray-300">24/7 Hotline</div>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-blue-400" />
                 <div>
-                  <div>offers@foxyhomebuyer.com</div>
+                  <div>info@foxyhomebuyer.com</div>
                   <div className="text-sm text-gray-300">Fast Response</div>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-blue-400" />
                 <div>
-                  <div>Riverview, FL 33578</div>
+                  <div>2908 W Bay to Bay Blvd, Tampa, FL 33629</div>
                   <div className="text-sm text-gray-300">Serving All Florida</div>
                 </div>
               </div>
@@ -172,7 +172,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              2024 Foxy Home Buyer LLC. All rights reserved. Licensed Real Estate Investor.
+            &copy; 2025 Foxy Home Buyer LLC. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
               <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">

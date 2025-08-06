@@ -374,7 +374,7 @@ export default function BlogPostClient({ post, allPosts }: BlogPostClientProps) 
                       Get Cash Offer
                     </Button>
                     <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
-                      Call (555) 123-4567
+                      Call (866) 404-3664
                     </Button>
                   </div>
                 </motion.div>

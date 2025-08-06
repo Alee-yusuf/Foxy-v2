@@ -39,7 +39,7 @@ const Header = () => {
     { href: '/contact', label: 'Contact' },
   ];
 
-  const phoneNumber = '+1 (813) 555-2274';
+  const phoneNumber = '+1 (866) 404-3664';
 
   const copyPhoneNumber = async () => {
     try {
@@ -75,16 +75,16 @@ const Header = () => {
           >
             <div className="w-30 h-10 flex items-center justify-center group-hover:scale-105 transition-transform">
               <img 
-                src="images/logo.svg" 
+                src="images/foxy-logo.svg" 
                 alt="Foxy Home Buyer Logo" 
-                className="h-full w-30"
+                className="h-full w-50"
               />
             </div>
             {/* <div className="hidden sm:block">
               <div className="font-display font-bold text-xl text-gray-900">
-                Home Buyer
+                FOXY
               </div>
-              <div className="text-xs text-gray-600">Florida Cash Buyers</div>
+              <div className="text-xs text-gray-600">Home Buyer</div>
             </div> */}
           </Link>
 
@@ -185,7 +185,7 @@ const Header = () => {
               transition={{ duration: 0.3, ease: 'easeInOut' }}
               className="xl:hidden border-t border-gray-200 bg-white/95 backdrop-blur-sm"
             >
-              <div className="py-6 space-y-4">
+              <div className="py-6 space-y-2">
                 {allNavItems.map((item) => (
                   <Link
                     key={item.href}

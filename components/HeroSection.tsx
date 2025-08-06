@@ -118,7 +118,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.0 }}
-              className="flex flex-wrap gap-4 mb-8"
+              className="flex justify-between gap-4 mb-8"
             >
               {trustBadges.map((badge, index) => (
                 <div key={badge.text} className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2">

@@ -569,7 +569,7 @@ export default function SellYourHouse() {
                                 type="tel"
                                 value={formData.phone}
                                 onChange={(e) => handleInputChange('phone', e.target.value)}
-                                placeholder="(813) 555-0123"
+                                placeholder="(866) 404-3664"
                                 required
                               />
                             </div>

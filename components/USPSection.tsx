@@ -65,7 +65,7 @@ const USPSection = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             We're not just another "we buy houses" company. Here's what makes us different 
-            and why thousands of Florida homeowners trust us with their biggest asset.
+            and Google Verified Business of Florida homeowners trust us with their biggest asset.
           </p>
         </motion.div>
 
