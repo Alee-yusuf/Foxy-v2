@@ -10,30 +10,33 @@ export default function Reviews() {
   const videoTestimonials = [
     {
       id: 1,
-      name: 'Maria Rodriguez',
+      name: 'Satisfied Home Seller',
       location: 'Tampa, FL',
-      thumbnail: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
-      situation: 'Avoided Foreclosure',
-      amount: '$245,000',
-      preview: 'Saved my family home from foreclosure in just 9 days...'
+      youtubeId: 'XnZoO-dQUBA',
+      title: 'Selling my Tampa Home With Foxy Home Buyer',
+      situation: 'Home Sale',
+      amount: '$0',
+      preview: 'Hear about this homeowner\'s experience selling their Tampa home...'
     },
     {
       id: 2,
-      name: 'Robert Johnson',
-      location: 'St. Petersburg, FL',
-      thumbnail: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
-      situation: 'Job Relocation',
-      amount: '$318,500',
-      preview: 'Had to move quickly for work. Foxy made it seamless...'
+      name: 'Virtual Home Buyer',
+      location: 'Florida',
+      youtubeId: 'dTdebVtXfLE',
+      title: 'Foxy Buys Homes "Virtually"',
+      situation: 'Virtual Sale',
+      amount: '$0',
+      preview: 'See how we can buy your home completely virtually...'
     },
     {
       id: 3,
-      name: 'Jennifer Adams',
-      location: 'Clearwater, FL',
-      thumbnail: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
-      situation: 'Inherited Property',
-      amount: '$189,900',
-      preview: 'Inherited grandmas house, they handled everything...'
+      name: 'Yolanda Perez',
+      location: 'Florida',
+      youtubeId: 'ZPABZIqvOfg',
+      title: 'Foxy Home Buyer Trophy Case "Yolanda Perez"',
+      situation: 'Success Story',
+      amount: '$0',
+      preview: 'Yolanda shares her positive experience working with Foxy Home Buyer...'
     }
   ];
 
@@ -192,20 +195,19 @@ export default function Reviews() {
                   viewport={{ once: true }}
                   className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
                 >
-                  <div className="relative">
-                    <img
-                      src={video.thumbnail}
-                      alt={video.name}
-                      className="w-full h-48 object-cover"
+                  <div className="relative aspect-video">
+                    <iframe
+                      src={`https://www.youtube.com/embed/${video.youtubeId}`}
+                      title={video.title}
+                      className="w-full h-full"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
                     />
-                    <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                      <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">
-                        <Play className="w-6 h-6 text-blue-600 ml-1" />
+                    {video.amount !== '$0' && (
+                      <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                        {video.amount}
                       </div>
-                    </div>
-                    <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                      {video.amount}
-                    </div>
+                    )}
                   </div>
                   <div className="p-6">
                     <div className="flex items-center mb-4">
