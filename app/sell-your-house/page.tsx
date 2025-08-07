@@ -157,7 +157,7 @@ export default function SellYourHouse() {
     } catch (error) {
       console.error('EmailJS Error:', error);
       setSubmitStatus('error');
-      setErrorMessage('Failed to submit your information. Please try again or call us directly at (813) 555-CASH.');
+      setErrorMessage('Failed to submit your information. Please try again or call us directly at +1 (866) 404-3664.');
     } finally {
       setIsSubmitting(false);
     }
@@ -586,7 +586,7 @@ export default function SellYourHouse() {
                                   <div>
                                     <h3 className="font-bold text-green-800 text-lg">Property Information Submitted!</h3>
                                     <p className="text-green-700">
-                                      🎉 We've received your property details and will contact you within 24 hours with a cash offer!
+                                      We've received your property details and will contact you within 24 hours with a cash offer!
                                     </p>
                                   </div>
                                 </div>
@@ -611,7 +611,7 @@ export default function SellYourHouse() {
                                       className="border-red-300 text-red-700 hover:bg-red-50"
                                       asChild
                                     >
-                                      <a href="tel:+18135552274">Call (813) 555-CASH Now</a>
+                                      <a href="tel:+18664043664">Call +1 (866) 404-3664 Now</a>
                                     </Button>
                                   </div>
                                 </div>
@@ -737,9 +737,9 @@ export default function SellYourHouse() {
                         className="w-full mb-3"
                         asChild
                       >
-                        <a href="tel:+18135552274" className="flex items-center justify-center">
+                        <a href="tel:+18664043664" className="flex items-center justify-center">
                           <Phone className="w-4 h-4 mr-2" />
-                          Call (813) 555-CASH
+                          Call +1 (866) 404-3664
                         </a>
                       </Button>
                       <div className="text-center text-sm text-blue-200">

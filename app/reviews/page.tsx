@@ -46,7 +46,7 @@ export default function Reviews() {
       situation: 'Realtor Partnership',
       amount: '',
       text: "As a realtor, I have not worked with an investor in the past and so I was a little hesitant at first. After working with Damon Hart at Foxy Homes, I have a new perspective on working with investor partners. Damon made the transaction go smoothly. He was always available to answer all my questions for my clients and very knowledgeable. In the future, if I have another client in need, I will definitely give Damon at Foxy Homes a call.",
-      image: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop'
+      image: 'https://lh3.googleusercontent.com/a-/ALV-UjWSmzV1uQKOGMXPBFmgw6bUChoNCYTco9QZwXwvkJ4VDneJh3jR=w65-h65-p-rp-mo-br100'
     },
     {
       name: 'Patrick Piper',
@@ -56,7 +56,7 @@ export default function Reviews() {
       situation: 'Home Inspection',
       amount: '',
       text: "Damon Hart was an absolute pleasure to work with during their home insurance inspection. His genuine 'Go Getter' work ethics, professionalism, attentiveness, and appreciation for thorough service made the process seamless.",
-      image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop'
+      image: 'https://lh3.googleusercontent.com/a-/ALV-UjVsGKsbdGMSS9eiPqb1UhUt_rDlEj9G677vaz-8kju7d-stRhcf=w72-h72-p-rp-mo-br100'
     },
     {
       name: 'Pamela Meyer',
@@ -66,7 +66,7 @@ export default function Reviews() {
       situation: 'Property Sale',
       amount: '',
       text: "Had a great experience working with Foxy Home Buyer on selling a property. They were really great and quick to respond to all calls and emails. They had everything put together, and made the process smooth from start to finish. Would definitely recommend working with them if you get the chance!",
-      image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop'
+      image: 'https://lh3.googleusercontent.com/a-/ALV-UjU8JMTLX85WYtkILz6u-t-yfk1rNIlC7DyaDHnGQFFigG7tPcPv=w65-h65-p-rp-mo-br100'
     },
     {
       name: 'Fanny Horn',
@@ -76,7 +76,7 @@ export default function Reviews() {
       situation: 'Professional Transaction',
       amount: '',
       text: "Foxy Home Buyer knows what they are doing! They moved quickly, are organized and professionals. We went through every steps smoothly and closing was seamless. It's not every day you get a transaction that goes this well. I am looking forward to the next one! Well done!",
-      image: 'https://images.pexels.com/photos/1181424/pexels-photo-1181424.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop'
+      image: 'https://lh3.googleusercontent.com/a-/ALV-UjVniZJpdSQLER7C4mpEnsv6ZRnk3JZeQeiqatfm2HNWw41gSEbMQw=w72-h72-p-rp-mo-ba3-br100'
     },
     {
       name: 'Jenny Quiceno',
@@ -86,7 +86,7 @@ export default function Reviews() {
       situation: 'Home Purchase',
       amount: '',
       text: "We recently purchased one of their homes through our Realtor and it was an excellent value. The home has become a comfort zone for my mom—she absolutely loves it! On top of that, it's proved to be a fantastic long‑term investment. Highly recommend!",
-      image: 'https://images.pexels.com/photos/1212984/pexels-photo-1212984.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop'
+      image: 'https://lh3.googleusercontent.com/a-/ALV-UjUjJdBXLOKv6oARR6RXCNoFWeg14Qp8TNI2d6Aqky1DxauR5sY=w72-h72-p-rp-mo-br100'
     },
     {
       name: 'Charity Brooks',
@@ -96,7 +96,7 @@ export default function Reviews() {
       situation: 'First Time Seller',
       amount: '',
       text: "As a first time home seller I didn't know where to turn to sell. Had companies sending mail saying they would buy and I was unclear. Foxy home buyers have talked me through steps and made an offer. From day one Damon had been right there to answer any questions I might have and/or something I needed clarifying. I would recommend Foxy to my friends and family. Great team members who are professional, polite, and friendly.",
-      image: 'https://images.pexels.com/photos/1181717/pexels-photo-1181717.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop'
+      image: 'https://lh3.googleusercontent.com/a-/ALV-UjXCljxhdXkQCTitCcbgSIu0szGMN0djhExkMKqyb8YNDtNGMkEH=w54-h54-p-rp-mo-br100'
     }
   ];
 
