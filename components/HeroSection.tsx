@@ -13,7 +13,7 @@ const HeroSection = () => {
 
   const trustBadges = [
     { icon: Star, text: 'BBB A+ Rating', color: 'text-yellow-500' },
-    { icon: Shield, text: '$2,500 Guarantee', color: 'text-green-500' },
+    { icon: Shield, text: '$2,500 On-Time Guarantee', color: 'text-green-500' },
     { icon: Clock, text: '7-Day Closing', color: 'text-blue-500' },
   ];
 
