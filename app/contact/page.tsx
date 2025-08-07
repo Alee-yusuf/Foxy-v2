@@ -89,24 +89,28 @@ export default function Contact() {
 
   const contactMethods = [
     {
+      id: 'phone',
       icon: Phone,
-      title: 'Call Us',
-      subtitle: 'Speak with our team',
+      title: 'Contact by Phone',
+      subtitle: 'Choose your preferred method',
       info: '+1 (866) 404-3664',
-      description: 'Available 24/7 for immediate assistance',
-      action: 'tel:+18664043664',
-      buttonText: 'Call Now'
+      description: 'Available 24/7 via call or text',
+      isToggleable: true,
+      modes: {
+        call: {
+          action: 'tel:+18664043664',
+          buttonText: 'Call Now',
+          description: 'Speak with our team instantly'
+        },
+        text: {
+          action: 'sms:+18664043664',
+          buttonText: 'Send Text',
+          description: 'Quick text message response'
+        }
+      }
     },
     {
-      icon: MessageCircle,
-      title: 'Text Us',
-      subtitle: 'Quick text message',
-      info: '+1 (866) 404-3664',
-      description: 'Fast response via SMS',
-      action: 'sms:+18664043664',
-      buttonText: 'Send Text'
-    },
-    {
+      id: 'email',
       icon: Mail,
       title: 'Email Us',
       subtitle: 'Send us a message',
@@ -115,8 +119,8 @@ export default function Contact() {
       action: 'mailto:info@foxyhomebuyer.com',
       buttonText: 'Send Email'
     },
-    // Hidden for now - will be implemented next
     {
+      id: 'chat',
       icon: MessageSquare,
       title: 'Live Chat',
       subtitle: 'Chat with us now',
@@ -217,12 +221,29 @@ export default function Contact() {
                   <p className="text-sm text-gray-500 mb-6">
                     {method.description}
                   </p>
-                  <Button
-                    asChild
-                    className="w-full cta-gradient text-white"
-                  >
-                    <a href={method.action}>{method.buttonText}</a>
-                  </Button>
+                  {method.isToggleable ? (
+                    <div className="flex items-center justify-center space-x-4">
+                      <Button
+                        asChild
+                        className="w-full cta-gradient text-white"
+                      >
+                        <a href={method.modes.call.action}>{method.modes.call.buttonText}</a>
+                      </Button>
+                      <Button
+                        asChild
+                        className="w-full cta-gradient text-white"
+                      >
+                        <a href={method.modes.text.action}>{method.modes.text.buttonText}</a>
+                      </Button>
+                    </div>
+                  ) : (
+                    <Button
+                      asChild
+                      className="w-full cta-gradient text-white"
+                    >
+                      <a href={method.action}>{method.buttonText}</a>
+                    </Button>
+                  )}
                 </motion.div>
               ))}
             </div>
