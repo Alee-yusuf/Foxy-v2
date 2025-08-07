@@ -7,7 +7,7 @@ const USPSection = () => {
   const usps = [
     {
       icon: Shield,
-      title: '$2,500 Guarantee',
+      title: '$2,500 On-Time Guarantee',
       description: 'If we fail to close on time, we pay YOU $2,500. That\'s how confident we are in our process.',
       color: 'text-green-500',
       bgColor: 'bg-green-100',

@@ -185,7 +185,7 @@ export default function SellYourHouse() {
               <div className="flex justify-center items-center space-x-6">
                 <div className="flex items-center">
                   <Shield className="w-5 h-5 mr-2 text-green-400" />
-                  <span>$2,500 Guarantee</span>
+                  <span>$2,500 On-Time Guarantee</span>
                 </div>
                 <div className="flex items-center">
                   <Clock className="w-5 h-5 mr-2 text-blue-300" />
@@ -681,7 +681,7 @@ export default function SellYourHouse() {
                         <div className="flex items-center">
                           <Shield className="w-6 h-6 text-green-500 mr-3" />
                           <div>
-                            <div className="font-semibold">$2,500 Guarantee</div>
+                            <div className="font-semibold">$2,500 On-Time Guarantee</div>
                             <div className="text-sm text-gray-600">If we fail to close on time</div>
                           </div>
                         </div>

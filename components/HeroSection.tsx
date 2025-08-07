@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { CheckCircle, Star, Shield, Clock } from 'lucide-react';
+import { CheckCircle, Star, Brain, Shield, Clock } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const HeroSection = () => {
@@ -71,8 +71,8 @@ const HeroSection = () => {
               transition={{ delay: 0.2 }}
               className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6"
             >
-              <Shield className="w-4 h-4 mr-2 text-green-400" />
-              <span className="text-sm font-medium">$2,500 On-Time Guarantee</span>
+              <Brain className="w-4 h-4 mr-2 text-green-400" />
+              <span className="text-sm font-medium">Tampa's Smartest Home Buyer</span>
             </motion.div>
 
             {/* Main Headline */}
