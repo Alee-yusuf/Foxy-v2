@@ -10,33 +10,33 @@ export default function Reviews() {
   const videoTestimonials = [
     {
       id: 1,
-      name: 'Satisfied Home Seller',
+      name: 'Closing With Joy',
       location: 'Tampa, FL',
       youtubeId: 'XnZoO-dQUBA',
       title: 'Selling my Tampa Home With Foxy Home Buyer',
-      situation: 'Home Sale',
+      situation: 'Inherited Property',
       amount: '$0',
-      preview: 'Hear about this homeowner\'s experience selling their Tampa home...'
+      preview: 'Julie opens up about the emotional process of selling the home she grew up in.'
     },
     {
       id: 2,
-      name: 'Virtual Home Buyer',
+      name: 'Sold Without Showing Up',
       location: 'Florida',
       youtubeId: 'dTdebVtXfLE',
       title: 'Foxy Buys Homes "Virtually"',
-      situation: 'Virtual Sale',
+      situation: 'Relocation',
       amount: '$0',
-      preview: 'See how we can buy your home completely virtually...'
+      preview: 'Jessica sold her home virtually, without ever stepping foot inside.'
     },
     {
       id: 3,
-      name: 'Yolanda Perez',
+      name: 'Escape the Mess',
       location: 'Florida',
       youtubeId: 'ZPABZIqvOfg',
       title: 'Foxy Home Buyer Trophy Case "Yolanda Perez"',
-      situation: 'Success Story',
+      situation: 'Foreclosure',
       amount: '$0',
-      preview: 'Yolanda shares her positive experience working with Foxy Home Buyer...'
+      preview: 'Yolanda never thought she’d get rid of the home. Foreclosure, squatters… now she’s finally free.'
     }
   ];
 
