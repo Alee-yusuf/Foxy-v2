@@ -96,7 +96,7 @@ const Footer = () => {
               {[
                 { href: '/', label: 'Home' },
                 { href: '/how-it-works', label: 'How It Works' },
-                { href: '/get-cash-offer', label: 'Get Cash Offer' },
+                { href: '/sell-your-house', label: 'Sell Your House' },
                 { href: '/service-areas', label: 'Service Areas' },
                 { href: '/reviews', label: 'Customer Reviews' },
                 { href: '/faq', label: 'FAQ' },

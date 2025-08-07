@@ -64,8 +64,7 @@ const USPSection = () => {
             Why Choose Foxy Home Buyer?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We're not just another "we buy houses" company. Here's what makes us different 
-            and Google Verified Business of Florida homeowners trust us with their biggest asset.
+          We're more than a typical house-buying company, we're a Google Verified, trusted name in Florida. Homeowners choose us when it's time to handle their most important asset with care, integrity, and professionalism.
           </p>
         </motion.div>
 
