@@ -9,25 +9,74 @@ import { Button } from '@/components/ui/button';
 export default function About() {
   const teamMembers = [
     {
-      name: 'Michael Johnson',
-      role: 'Founder & CEO',
-      bio: 'Former realtor with 15+ years in Florida real estate. Started Foxy Home Buyer to help homeowners avoid the stress and costs of traditional sales.',
-      image: 'https://images.pexels.com/photos/1212984/pexels-photo-1212984.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop',
+      name: 'Mr Foxy',
+      role: 'Founder',
+      bio: 'Long time Real Estate professional and Real Estate Investor. I enjoy surfing and exercise... – Damon',
+      image: '/images/team/mr-foxy.png',
       quote: 'Every homeowner deserves a fair, fast, and stress-free selling experience.'
     },
     {
-      name: 'Sarah Martinez',
-      role: 'Head of Acquisitions',
-      bio: 'Licensed real estate appraiser and investor with deep knowledge of Florida markets. Ensures every offer is fair and competitive.',
-      image: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop',
+      name: 'Dale-O',
+      role: 'Team Member',
+      bio: 'I enjoy watching tv shows and movies as well as sports or any physical activity... – Dale',
+      image: '/images/team/dale‑o.jpg',
       quote: 'We build our reputation one fair offer at a time.'
     },
     {
-      name: 'David Chen',
-      role: 'Operations Director',
-      bio: 'Former title company executive who streamlines our closing process. Guarantees smooth, on-time closings for every customer.',
-      image: 'https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop',
+      name: 'Mr Consistency',
+      role: 'Tech Lead',
+      bio: 'I\'m a technology geek... I spend most of my time playing video games, tinkering with my computer and watching computer related videos on the internet. – Vince',
+      image: '/images/team/mr-consistency.jpg',
       quote: 'Details matter. We handle everything so you don\'t have to worry.'
+    },
+    {
+      name: 'The Chef',
+      role: 'Data Specialist',
+      bio: 'My wife and beautiful young daughter are my treasures. Next to that is my data. Data guy through and through. I work overseas, handling complex data every day. – Wasi',
+      image: '/images/team/chef.jpg',
+      quote: 'Data-driven decisions for better real estate solutions.'
+    },
+    {
+      name: 'Silver Fox',
+      role: 'Operations',
+      bio: 'I help steer the ship daily!',
+      image: '/images/team/silver-fox.jpg',
+      quote: 'Smooth operations, happy clients.'
+    },
+    {
+      name: 'C-Banks',
+      role: 'Finance Manager',
+      bio: 'The keeper of books and numbers. I like to travel and spend most of my time bonding with family and friends – Clau',
+      image: '/images/team/c-bank.jpg',
+      quote: 'Precision in numbers, excellence in service.'
+    },
+    {
+      name: 'The Voice',
+      role: 'Customer Relations',
+      bio: 'Singer, music lover, and a dedicated mom. I like taking photos and videos of wonderful places creating memories along the way. – Krissie',
+      image: '/images/team/the-voice.jpg',
+      quote: 'Your voice matters in every transaction.'
+    },
+    {
+      name: 'Jessie',
+      role: 'Operations Coordinator',
+      bio: 'Texan who lives by the saying "trust the process." When it comes to keeping Foxy organized, that\'s me! I believe in taking things step by step, ensuring everything falls into place just the way it should. – Jessica',
+      image: '/images/team/jessie.jpg',
+      quote: 'Organization is the key to success.'
+    },
+    {
+      name: 'Alessia',
+      role: 'Realtor',
+      bio: 'I have a passion for homemaking, staying organized, and making to-do lists that keep everything running smoothly. And a proud Canadian realtor. – Alessia',
+      image: '/images/team/alessia.jpg',
+      quote: 'Finding your dream home, one checklist at a time.'
+    },
+    {
+      name: 'Tina B',
+      role: 'Customer Support',
+      bio: 'Mother of two and a retired firefighter. With my background in the fire service, I know the importance of quick thinking and staying calm under pressure. I\'m also a huge sports enthusiast. – Tina B',
+      image: '/images/team/tina-b.jpg',
+      quote: 'Calm under pressure, always here to help.'
     }
   ];
 
@@ -235,33 +284,33 @@ export default function About() {
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-6 max-w-7xl mx-auto px-4">
               {teamMembers.map((member, index) => (
                 <motion.div
                   key={member.name}
-                  initial={{ opacity: 0, y: 50 }}
+                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col items-center p-4 text-center"
                 >
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-64 object-cover"
-                  />
-                  <div className="p-6">
-                    <h3 className="font-display font-bold text-xl text-gray-900 mb-1">
-                      {member.name}
-                    </h3>
-                    <div className="text-blue-600 font-medium mb-4">{member.role}</div>
-                    <p className="text-gray-600 mb-4 leading-relaxed">
-                      {member.bio}
-                    </p>
-                    <blockquote className="border-l-4 border-blue-200 pl-4 italic text-gray-700">
-                      "{member.quote}"
-                    </blockquote>
+                  <div className="w-32 h-32 md:w-36 md:h-36 rounded-full overflow-hidden border-4 border-blue-100 mb-4">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
+                  <h3 className="font-display font-bold text-lg text-gray-900 mb-1">
+                    {member.name}
+                  </h3>
+                  <div className="text-blue-600 text-sm font-medium mb-2">{member.role}</div>
+                  <p className="text-sm text-gray-600 mb-2 line-clamp-3">
+                    {member.bio}
+                  </p>
+                  <p className="text-xs text-gray-500 italic mt-auto">
+                    "{member.quote}"
+                  </p>
                 </motion.div>
               ))}
             </div>
