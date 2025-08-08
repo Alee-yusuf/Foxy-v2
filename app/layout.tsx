@@ -13,6 +13,11 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: 'Sell Your Florida House Fast for Cash | Foxy Home Buyer LLC',
   description: 'Get a guaranteed cash offer for your Florida house in just 3 minutes. No repairs, no fees, close in 7 days. $2,500 guarantee if we fail to close on time.',
+  icons: {
+    icon: [
+      { url: '/images/foxy-logo.svg', type: 'image/svg+xml' }
+    ]
+  },
   keywords: 'sell house fast Florida, cash home buyer, we buy houses Florida, sell house cash, avoid foreclosure Florida, Tampa cash buyer, St Petersburg house buyer, Clearwater sell house fast',
   openGraph: {
     title: 'Sell Your Florida House Fast for Cash | Foxy Home Buyer LLC',
