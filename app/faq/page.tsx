@@ -17,7 +17,14 @@ export default function FAQ() {
       questions: [
         {
           question: 'How does the cash home buying process work?',
-          answer: "It's simple: 1) Tell us about your house, 2) We make you a fair cash offer within 24 hours, 3) You choose the closing date, 4) We handle all paperwork and you get cash at closing. No repairs, no realtor fees, no waiting for buyer financing."
+          answer: <>
+            It's simple:<br /><br />
+            • Tell us about your house<br />
+            • We make you a fair cash offer within 24 hours<br />
+            • You choose the closing date<br />
+            • We handle all paperwork and you get cash at closing<br /><br />
+            No repairs, no realtor fees, no waiting for buyer financing.
+          </>
         },
         {
           question: 'How quickly can you close?',
