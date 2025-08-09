@@ -21,7 +21,7 @@ export default function Reviews() {
     {
       id: 2,
       name: 'Sold Without Showing Up',
-      location: 'Yellow Riverview, FL',
+      location: 'Riverview, FL',
       youtubeId: 'dTdebVtXfLE',
       title: 'Foxy Buys Homes "Virtually"',
       situation: 'Relocation',
