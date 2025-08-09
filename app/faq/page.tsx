@@ -279,7 +279,7 @@ export default function FAQ() {
                 <div className="grid md:grid-cols-3 gap-6">
                   <div className="text-center">
                     <Shield className="w-8 h-8 text-green-500 mx-auto mb-2" />
-                    <div className="font-semibold">$2,500 Guarantee</div>
+                    <div className="font-semibold">$2,500 on-time Guarantee</div>
                     <div className="text-sm text-gray-600">On-time closing promise</div>
                   </div>
                   <div className="text-center">
