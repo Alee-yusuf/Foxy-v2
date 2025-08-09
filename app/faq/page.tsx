@@ -65,7 +65,7 @@ export default function FAQ() {
         },
         {
           question: 'Are you a legitimate company?',
-          answer: "Yes! We're a licensed Florida real estate company with BBB A+ rating. We've been buying houses in Florida for years and have closed on hundreds of properties. You can verify our credentials and see our reviews online."
+          answer: "Yes! We’re a registered florida real estate company established in 2014. We've been buying houses in Florida for years and have closed on hundreds of properties. You can verify our credentials and see our reviews online."
         },
         {
           question: 'Is there any obligation when I request an offer?',
@@ -250,8 +250,8 @@ export default function FAQ() {
                     className="w-full"
                     asChild
                   >
-                    <a href="tel:+18135552274" className="flex items-center justify-center">
-                      <span className="font-semibold text-lg">(813) 555-CASH</span>
+                    <a href="tel:+18664043664" className="flex items-center justify-center">
+                      <span className="font-semibold text-lg">+1 (866) 404-3664</span>
                     </a>
                   </Button>
                 </div>

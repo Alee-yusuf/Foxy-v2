@@ -21,7 +21,7 @@ export default function Reviews() {
     {
       id: 2,
       name: 'Sold Without Showing Up',
-      location: 'Florida',
+      location: 'Yellow Riverview, FL',
       youtubeId: 'dTdebVtXfLE',
       title: 'Foxy Buys Homes "Virtually"',
       situation: 'Relocation',
@@ -31,7 +31,7 @@ export default function Reviews() {
     {
       id: 3,
       name: 'Escape the Mess',
-      location: 'Florida',
+      location: 'Tampa, FL',
       youtubeId: 'ZPABZIqvOfg',
       title: 'Foxy Home Buyer Trophy Case "Yolanda Perez"',
       situation: 'Foreclosure',
@@ -43,7 +43,7 @@ export default function Reviews() {
   const writtenTestimonials = [
     {
       name: 'Pamela Whitlock',
-      location: 'Florida',
+      location: 'Wesley, Chappell, FL',
       rating: 5,
       date: '3 weeks ago',
       situation: 'Realtor Partnership',
@@ -53,7 +53,7 @@ export default function Reviews() {
     },
     {
       name: 'Patrick Piper',
-      location: 'Florida',
+      location: 'Lutz, FL',
       rating: 5,
       date: '1 month ago',
       situation: 'Home Inspection',
@@ -63,7 +63,7 @@ export default function Reviews() {
     },
     {
       name: 'Pamela Meyer',
-      location: 'Florida',
+      location: 'Cocoa, FL',
       rating: 5,
       date: '3 weeks ago',
       situation: 'Property Sale',
@@ -73,7 +73,7 @@ export default function Reviews() {
     },
     {
       name: 'Fanny Horn',
-      location: 'Suncoast, FL',
+      location: 'Apollo Beach, FL',
       rating: 5,
       date: '3 weeks ago',
       situation: 'Professional Transaction',
@@ -83,7 +83,7 @@ export default function Reviews() {
     },
     {
       name: 'Jenny Quiceno',
-      location: 'Florida',
+      location: 'Riverview, FL',
       rating: 5,
       date: '1 month ago',
       situation: 'Home Purchase',
@@ -93,7 +93,7 @@ export default function Reviews() {
     },
     {
       name: 'Charity Brooks',
-      location: 'Florida',
+      location: 'Frostproof, FL',
       rating: 5,
       date: '2 months ago',
       situation: 'First Time Seller',
@@ -215,7 +215,7 @@ export default function Reviews() {
                         <h3 className="font-bold text-lg text-gray-900">{video.name}</h3>
                         <div className="flex items-center text-gray-600">
                           <MapPin className="w-4 h-4 mr-1" />
-                          <span className="text-sm">{video.location}</span>
+                            <span className="text-sm">{video.location}</span>
                         </div>
                       </div>
                     </div>

@@ -32,9 +32,9 @@ const Header = () => {
   const allNavItems = [
     { href: '/', label: 'Home' },
     { href: '/how-it-works', label: 'How It Works' },
-    { href: '/sell-your-house', label: 'Get Cash Offer' },
-    { href: '/service-areas', label: 'Service Areas' },
+    { href: '/sell-your-house', label: 'Sell Your House' },
     { href: '/reviews', label: 'Reviews' },
+    { href: '/service-areas', label: 'Service Areas' },
     { href: '/faq', label: 'FAQ' },
     { href: '/contact', label: 'Contact' },
   ];
