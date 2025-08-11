@@ -5,8 +5,10 @@ import { X, Shield, Clock, CheckCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { useRouter } from 'next/navigation';
 
 const ExitIntentPopup = () => {
+  const router = useRouter();
   const [isVisible, setIsVisible] = useState(false);
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -39,6 +41,7 @@ const ExitIntentPopup = () => {
     e.preventDefault();
     console.log('Exit intent form submitted:', { email, phone });
     setIsVisible(false);
+    router.push('/sell-your-house');
   };
 
   const handleClose = () => {

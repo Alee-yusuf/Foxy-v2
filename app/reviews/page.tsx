@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import { Star, Play, Quote, MapPin, DollarSign } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export default function Reviews() {
   const videoTestimonials = [
@@ -318,11 +319,14 @@ export default function Reviews() {
               <Button
                 size="lg"
                 className="cta-gradient text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 animate-pulse-glow"
+                asChild
               >
-                Get My Cash Offer Now
+                <Link href="/sell-your-house" aria-label="Get My Cash Offer Now">
+                  Get My Cash Offer Now
+                </Link>
               </Button>
               <div className="mt-6 text-blue-200">
-                ⭐ Join 500+ satisfied customers with 4.9/5 rating
+                Join 500+ satisfied customers with 4.9/5 rating
               </div>
             </motion.div>
           </div>

@@ -398,8 +398,11 @@ export default function ServiceAreas() {
                 <Button
                   size="lg"
                   className="cta-gradient text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 animate-pulse-glow"
+                  asChild
                 >
-                  Get My Cash Offer
+                  <Link href="/sell-your-house" aria-label="Get My Cash Offer">
+                    Get My Cash Offer
+                  </Link>
                 </Button>
                 <Button
                   size="lg"

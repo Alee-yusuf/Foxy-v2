@@ -7,6 +7,7 @@ import { Download, FileText, Calculator, CheckCircle, Star, Play, BookOpen } fro
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import Link from 'next/link';
 
 export default function Resources() {
   const [email, setEmail] = useState('');
@@ -355,8 +356,11 @@ export default function Resources() {
                 <Button
                   size="lg"
                   className="cta-gradient text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 animate-pulse-glow"
+                  asChild
                 >
-                  Get My Free Cash Offer
+                  <Link href="/sell-your-house" aria-label="Get My Free Cash Offer">
+                    Get My Free Cash Offer
+                  </Link>
                 </Button>
               </div>
             </motion.div>
@@ -385,14 +389,20 @@ export default function Resources() {
                   size="lg"
                   variant="outline"
                   className="bg-white text-blue-600 border-white hover:bg-blue-50 px-8 py-4 rounded-full font-semibold text-lg"
+                  asChild
                 >
-                  Schedule Free Consultation
+                  <Link href="/sell-your-house" aria-label="Schedule Free Consultation">
+                    Schedule Free Consultation
+                  </Link>
                 </Button>
                 <Button
                   size="lg"
                   className="cta-gradient text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90"
+                  asChild
                 >
-                  Call (813) 555-CASH
+                  <a href="tel:+18664043664" className="flex items-center" aria-label="Call +1 (866) 404-3664">
+                    Call +1 (866) 404-3664
+                  </a>
                 </Button>
               </div>
               <div className="mt-6 text-blue-200">

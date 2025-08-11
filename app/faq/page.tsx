@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import { ChevronDown, Shield, Clock, DollarSign, Home } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export default function FAQ() {
   const [openItem, setOpenItem] = useState<number | null>(0);
@@ -273,8 +274,11 @@ export default function FAQ() {
                   <Button
                     size="lg"
                     className="w-full cta-gradient text-white"
+                    asChild
                   >
-                    Get My Cash Offer
+                    <Link href="/sell-your-house" aria-label="Get My Cash Offer">
+                      Get My Cash Offer
+                    </Link>
                   </Button>
                 </div>
               </div>

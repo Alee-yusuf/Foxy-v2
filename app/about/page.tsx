@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import { Shield, Heart, TrendingUp, Users, Award, CheckCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export default function About() {
   const teamMembers = [
@@ -403,8 +404,11 @@ export default function About() {
               <Button
                 size="lg"
                 className="cta-gradient text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 animate-pulse-glow"
+                asChild
               >
-                Get Your Fair Cash Offer
+                <Link href="/sell-your-house" aria-label="Get Your Fair Cash Offer">
+                  Get Your Fair Cash Offer
+                </Link>
               </Button>
               <div className="mt-6 text-gray-500">
                 🏠 No obligation • ⚡ 24-hour response • 🛡️ $2,500 guarantee

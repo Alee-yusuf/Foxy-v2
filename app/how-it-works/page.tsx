@@ -4,6 +4,8 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { CheckCircle, Phone, FileText, DollarSign, Clock, Shield } from 'lucide-react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
 export default function HowItWorks() {
   const steps = [
@@ -276,9 +278,11 @@ export default function HowItWorks() {
                 Get your cash offer today and see why thousands of Florida homeowners 
                 choose our simple, fast process.
               </p>
-              <button className="cta-gradient text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-opacity animate-pulse-glow">
-                Start Step 1: Get My Offer
-              </button>
+              <Button className="cta-gradient text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-opacity animate-pulse-glow" asChild>
+                <Link href="/sell-your-house" aria-label="Start Step 1: Get My Offer">
+                  Start Step 1: Get My Offer
+                </Link>
+              </Button>
             </motion.div>
           </div>
         </section>
