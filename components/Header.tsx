@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Menu, X, Phone, Copy, Check } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { toast } from 'sonner';
+import Image from 'next/image';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -74,10 +75,13 @@ const Header = () => {
             className="flex items-center space-x-2 hover:opacity-90 transition-opacity group"
           >
             <div className="w-30 h-10 flex items-center justify-center group-hover:scale-105 transition-transform">
-              <img 
-                src="images/foxy-logo.svg" 
+              <Image 
+                src="/images/foxy-logo.svg" 
                 alt="Foxy Home Buyer Logo" 
-                className="h-full w-50"
+                width={160}
+                height={40}
+                priority
+                className="h-10 w-auto"
               />
             </div>
             {/* <div className="hidden sm:block">

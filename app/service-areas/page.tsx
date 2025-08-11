@@ -1,14 +1,19 @@
 'use client';
 
-import { useState } from 'react';
+import { } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { MapPin, Star, Phone, CheckCircle, TrendingUp } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export default function ServiceAreas() {
-  const [selectedCity, setSelectedCity] = useState<string | null>(null);
+  const router = useRouter();
+
+  // Helper to convert city names to URL slugs
+  const toSlug = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 
   const primaryAreas = [
     {
@@ -199,7 +204,7 @@ export default function ServiceAreas() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow cursor-pointer"
-                  onClick={() => setSelectedCity(selectedCity === area.name ? null : area.name)}
+                  onClick={() => router.push(`/service-areas/${toSlug(area.name)}`)}
                 >
                   <div className="flex items-center justify-between mb-4">
                     <div>
@@ -224,6 +229,12 @@ export default function ServiceAreas() {
                     ))}
                   </div>
 
+                  <div className="mb-4">
+                    <Button size="sm" variant="outline" className="text-blue-700 border-blue-200 hover:bg-blue-50" asChild>
+                      <Link href={`/service-areas/${toSlug(area.name)}`}>View insights for {area.name}</Link>
+                    </Button>
+                  </div>
+
                   {/* Testimonial */}
                   <div className="border-t pt-4">
                     <div className="flex items-center mb-2">
@@ -237,28 +248,7 @@ export default function ServiceAreas() {
                     <p className="text-sm text-gray-600 italic">"{area.testimonial.text}"</p>
                   </div>
 
-                  {/* Expanded Content */}
-                  {selectedCity === area.name && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
-                      className="mt-4 pt-4 border-t"
-                    >
-                      <div className="space-y-3">
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Population:</span>
-                          <span className="font-semibold">{area.population}</span>
-                        </div>
-                        <Button
-                          size="sm"
-                          className="w-full cta-gradient text-white"
-                        >
-                          Get {area.name} Cash Offer
-                        </Button>
-                      </div>
-                    </motion.div>
-                  )}
+                  {/* The detailed content now lives on the city insights page */}
                 </motion.div>
               ))}
             </div>
@@ -297,13 +287,15 @@ export default function ServiceAreas() {
                   </p>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     {additionalAreas.map((area) => (
-                      <div
+                      <Link
                         key={area.name}
-                        className="bg-white rounded-lg p-3 shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+                        href={`/service-areas/${toSlug(area.name)}`}
+                        className="bg-white rounded-lg p-3 shadow-sm hover:shadow-md transition-shadow cursor-pointer block"
+                        aria-label={`View insights for ${area.name}`}
                       >
                         <div className="font-semibold text-gray-900 text-sm">{area.name}</div>
                         <div className="text-xs text-gray-500">{area.county}</div>
-                      </div>
+                      </Link>
                     ))}
                   </div>
                 </div>

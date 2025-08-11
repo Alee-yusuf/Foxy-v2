@@ -136,27 +136,41 @@ const Footer = () => {
           <div>
             <h3 className="font-display font-semibold text-lg mb-4">Contact Us</h3>
             <div className="space-y-3">
-              <div className="flex items-center space-x-3">
+              <a
+                href="tel:+18664043664"
+                aria-label="Call Foxy Home Buyer at +1 (866) 404-3664"
+                className="flex items-center space-x-3 hover:text-white transition-colors"
+              >
                 <Phone className="w-5 h-5 text-blue-400" />
                 <div>
                   <div className="font-semibold">+1 (866) 404-3664</div>
                   <div className="text-sm text-gray-300">24/7 Hotline</div>
                 </div>
-              </div>
-              <div className="flex items-center space-x-3">
+              </a>
+              <a
+                href="mailto:info@foxyhomebuyer.com"
+                aria-label="Email Foxy Home Buyer at info@foxyhomebuyer.com"
+                className="flex items-center space-x-3 hover:text-white transition-colors"
+              >
                 <Mail className="w-5 h-5 text-blue-400" />
                 <div>
                   <div>info@foxyhomebuyer.com</div>
                   <div className="text-sm text-gray-300">Fast Response</div>
                 </div>
-              </div>
-              <div className="flex items-center space-x-3">
+              </a>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=2908+W+Bay+to+Bay+Blvd%2C+Tampa%2C+FL+33629"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open address in Google Maps"
+                className="flex items-center space-x-3 hover:text-white transition-colors"
+              >
                 <MapPin className="w-5 h-5 text-blue-400" />
                 <div>
                   <div>2908 W Bay to Bay Blvd, Tampa, FL 33629</div>
                   <div className="text-sm text-gray-300">Serving All Florida</div>
                 </div>
-              </div>
+              </a>
               <div className="flex items-center space-x-3">
                 <Clock className="w-5 h-5 text-blue-400" />
                 <div>

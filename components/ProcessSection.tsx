@@ -3,6 +3,8 @@
 import { useRef, useEffect } from 'react';
 import { Phone, FileText, DollarSign } from 'lucide-react';
 import { motion, useInView, useAnimation } from 'framer-motion';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
 const ProcessSection = () => {
   const ref = useRef(null);
@@ -147,9 +149,11 @@ const ProcessSection = () => {
             <p className="text-gray-600 mb-6">
               Get your cash offer today - it only takes 3 minutes!
             </p>
-            <button className="cta-gradient text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-opacity animate-pulse-glow">
-              Start Step 1: Get My Offer
-            </button>
+            <Button className="cta-gradient text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-opacity animate-pulse-glow" asChild>
+              <Link href="/sell-your-house" aria-label="Start Step 1: Get My Offer">
+                Start Step 1: Get My Offer
+              </Link>
+            </Button>
           </div>
         </motion.div>
       </div>

@@ -127,7 +127,7 @@ export default function Contact() {
       info: 'Available 24/7',
       description: 'Instant response via live chat',
       action: '#',
-      buttonText: 'Start Chat'
+      buttonText: 'Coming Soon'
     }
   ];
 

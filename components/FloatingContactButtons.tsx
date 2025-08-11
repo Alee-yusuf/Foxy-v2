@@ -40,7 +40,7 @@ const FloatingContactButtons = () => {
             </motion.a>
 
             {/* WhatsApp Button */}
-            <motion.a
+            {/* <motion.a
               href="https://wa.me/18135552274?text=Hi, I'm interested in selling my house for cash"
               target="_blank"
               rel="noopener noreferrer"
@@ -50,7 +50,7 @@ const FloatingContactButtons = () => {
             >
               <MessageCircle className="w-6 h-6" />
               <span className="ml-3 font-medium">WhatsApp</span>
-            </motion.a>
+            </motion.a> */}
           </motion.div>
         )}
       </AnimatePresence>

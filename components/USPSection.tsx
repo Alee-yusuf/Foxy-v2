@@ -2,6 +2,8 @@
 
 import { Shield, Clock, Home, DollarSign, CheckCircle, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
 const USPSection = () => {
   const usps = [
@@ -118,9 +120,11 @@ const USPSection = () => {
             <p className="text-xl text-blue-100 mb-8">
               Join hundreds of satisfied Florida homeowners who chose the smart way to sell.
             </p>
-            <button className="cta-gradient text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-opacity animate-pulse-glow">
-              Get My Guaranteed Offer
-            </button>
+            <Button className="cta-gradient text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-opacity animate-pulse-glow" asChild>
+              <Link href="/sell-your-house" aria-label="Get My Guaranteed Offer">
+                Get My Guaranteed Offer
+              </Link>
+            </Button>
           </div>
         </motion.div>
       </div>
