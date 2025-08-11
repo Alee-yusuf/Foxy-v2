@@ -44,10 +44,10 @@ export default function Reviews() {
   const writtenTestimonials = [
     {
       name: 'Pamela Whitlock',
-      location: 'Wesley, Chappell, FL',
+      location: 'Wesley Chapel, FL',
       rating: 5,
       date: '3 weeks ago',
-      situation: 'Realtor Partnership',
+      situation: 'Florida Realtor',
       amount: '',
       text: "As a realtor, I have not worked with an investor in the past and so I was a little hesitant at first. After working with Damon Hart at Foxy Homes, I have a new perspective on working with investor partners. Damon made the transaction go smoothly. He was always available to answer all my questions for my clients and very knowledgeable. In the future, if I have another client in need, I will definitely give Damon at Foxy Homes a call.",
       image: 'https://lh3.googleusercontent.com/a-/ALV-UjWSmzV1uQKOGMXPBFmgw6bUChoNCYTco9QZwXwvkJ4VDneJh3jR=w65-h65-p-rp-mo-br100'
