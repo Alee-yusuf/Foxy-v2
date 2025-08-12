@@ -90,7 +90,7 @@ export default function AreaPage({ params }: { params: { slug: string } }) {
               </div>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
                 <Button className="cta-gradient text-white px-6 py-3" asChild>
-                  <Link href="/contact">Get my cash offer</Link>
+                  <Link href="/sell-your-house">Get my cash offer</Link>
                 </Button>
                 <Button variant="outline" className="bg-white text-blue-700 border-white hover:bg-blue-50" asChild>
                   <a href="tel:+18664043664" className="flex items-center"><Phone className="w-4 h-4 mr-2" /> Call +1 (866) 404-3664</a>

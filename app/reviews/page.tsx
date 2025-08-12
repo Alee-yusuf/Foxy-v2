@@ -67,7 +67,7 @@ export default function Reviews() {
       location: 'Cocoa, FL',
       rating: 5,
       date: '3 weeks ago',
-      situation: 'Property Sale',
+      situation: 'Florida Realtor',
       amount: '',
       text: "Had a great experience working with Foxy Home Buyer on selling a property. They were really great and quick to respond to all calls and emails. They had everything put together, and made the process smooth from start to finish. Would definitely recommend working with them if you get the chance!",
       image: 'https://lh3.googleusercontent.com/a-/ALV-UjU8JMTLX85WYtkILz6u-t-yfk1rNIlC7DyaDHnGQFFigG7tPcPv=w65-h65-p-rp-mo-br100'
