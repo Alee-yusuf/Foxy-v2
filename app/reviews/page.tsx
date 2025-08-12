@@ -57,7 +57,7 @@ export default function Reviews() {
       location: 'Lutz, FL',
       rating: 5,
       date: '1 month ago',
-      situation: 'Home Inspection',
+      situation: 'Home Inspector',
       amount: '',
       text: "Damon Hart was an absolute pleasure to work with during their home insurance inspection. His genuine 'Go Getter' work ethics, professionalism, attentiveness, and appreciation for thorough service made the process seamless.",
       image: 'https://lh3.googleusercontent.com/a-/ALV-UjVsGKsbdGMSS9eiPqb1UhUt_rDlEj9G677vaz-8kju7d-stRhcf=w72-h72-p-rp-mo-br100'
@@ -77,7 +77,7 @@ export default function Reviews() {
       location: 'Apollo Beach, FL',
       rating: 5,
       date: '3 weeks ago',
-      situation: 'Professional Transaction',
+      situation: 'Florida Realtor',
       amount: '',
       text: "Foxy Home Buyer knows what they are doing! They moved quickly, are organized and professionals. We went through every steps smoothly and closing was seamless. It's not every day you get a transaction that goes this well. I am looking forward to the next one! Well done!",
       image: 'https://lh3.googleusercontent.com/a-/ALV-UjVniZJpdSQLER7C4mpEnsv6ZRnk3JZeQeiqatfm2HNWw41gSEbMQw=w72-h72-p-rp-mo-ba3-br100'
