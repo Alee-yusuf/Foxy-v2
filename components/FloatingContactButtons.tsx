@@ -30,7 +30,7 @@ const FloatingContactButtons = () => {
 
             {/* Phone Button */}
             <motion.a
-              href="tel:+18135552274"
+              href="tel:+18664043664"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="flex items-center bg-green-500 hover:bg-green-600 text-white rounded-full px-4 py-3 shadow-lg transition-colors min-w-[160px]"

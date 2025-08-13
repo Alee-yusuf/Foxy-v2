@@ -146,7 +146,7 @@ export default function AreaPage({ params }: { params: { slug: string } }) {
                   <h3 className="font-semibold text-gray-900 mb-2">Get your cash offer</h3>
                   <p className="text-gray-600 mb-4">Answer a few questions and receive a no‑obligation offer for your {area.name} home.</p>
                   <Button className="w-full cta-gradient text-white" asChild>
-                    <Link href="/contact">Start now</Link>
+                    <Link href="/sell-your-house">Start now</Link>
                   </Button>
                 </div>
               </aside>
