@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Download, FileText, Calculator, CheckCircle, Star, Play, BookOpen } from 'lucide-react';
+import { Download, FileText, Calculator, CheckCircle, Star, Play, BookOpen, Gift, Phone, MessageCircle, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -91,7 +91,7 @@ export default function Resources() {
       category: 'Testimonials'
     },
     {
-      title: 'Florida Market Update 2024',
+      title: 'Florida Market Update 2025',
       description: 'Current market conditions and what they mean for home sellers.',
       duration: '6:18',
       thumbnail: 'https://images.pexels.com/photos/273209/pexels-photo-273209.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop',
@@ -125,7 +125,7 @@ export default function Resources() {
                 about selling your house.
               </p>
               <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-6 py-3">
-                <Download className="w-5 h-5 mr-2 text-green-400" />
+                <Gift className="w-5 h-5 mr-2 text-white" />
                 <span>All resources are completely free • No strings attached</span>
               </div>
             </motion.div>
@@ -226,7 +226,7 @@ export default function Resources() {
         </section>
 
         {/* Video Resources */}
-        <section className="py-20 bg-gray-50">
+        {/* <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -281,7 +281,7 @@ export default function Resources() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* FAQ Quick Reference */}
         <section className="py-20 bg-white">
@@ -405,8 +405,21 @@ export default function Resources() {
                   </a>
                 </Button>
               </div>
-              <div className="mt-6 text-blue-200">
-                📞 Available 24/7 • 💬 Free consultation • ⚡ Quick response
+              <div className="mt-6 text-blue-200 flex items-center justify-center gap-4">
+                <div className="flex items-center">
+                  <Phone className="w-4 h-4 text-white mr-1" />
+                  <span>Available 24/7</span>
+                </div>
+                <span>•</span>
+                <div className="flex items-center">
+                  <MessageCircle className="w-4 h-4 text-white mr-1" />
+                  <span>Free consultation</span>
+                </div>
+                <span>•</span>
+                <div className="flex items-center">
+                  <Zap className="w-4 h-4 text-white mr-1" />
+                  <span>Quick response</span>
+                </div>
               </div>
             </motion.div>
           </div>

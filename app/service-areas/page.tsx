@@ -3,7 +3,7 @@
 import { } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { MapPin, Star, Phone, CheckCircle, TrendingUp } from 'lucide-react';
+import { MapPin, Star, Phone, CheckCircle, TrendingUp, Home, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -416,8 +416,15 @@ export default function ServiceAreas() {
                   </a>
                 </Button>
               </div>
-              <div className="mt-6 text-blue-200">
-                🏠 Serving all 67 Florida counties • ⭐ 4.9/5 rating • ⚡ 24/7 available
+              <div className="mt-6 text-blue-200 flex items-center justify-center gap-2">
+                <Home className="w-4 h-4 text-white" />
+                <span>Serving all 67 Florida counties</span>
+                <span>•</span>
+                <Star className="w-4 h-4 text-white" />
+                <span>4.9/5 rating</span>
+                <span>•</span>
+                <Zap className="w-4 h-4 text-white" />
+                <span>24/7 available</span>
               </div>
             </motion.div>
           </div>

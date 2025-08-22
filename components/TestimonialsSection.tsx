@@ -100,22 +100,22 @@ const TestimonialsSection = () => {
               >
                 {/* Testimonial Content */}
                 <div>
-                  <Quote className="w-12 h-12 text-blue-300 mb-6" />
+                  <Quote className="w-12 h-12 text-blue-300 ml-10 mb-6" />
                   
                   {/* Rating */}
-                  <div className="flex items-center mb-4">
+                  <div className="flex items-center ml-10 mb-4">
                     {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                     ))}
                   </div>
 
                   {/* Testimonial Text */}
-                  <blockquote className="text-lg md:text-xl text-gray-700 mb-6 leading-relaxed">
+                  <blockquote className="text-lg md:text-xl text-gray-700 ml-10 mb-6 leading-relaxed">
                     "{testimonials[currentIndex].text}"
                   </blockquote>
 
                   {/* Customer Info */}
-                  <div className="flex items-center space-x-4">
+                  <div className="flex items-center space-x-4 ml-10">
                     <img
                       src={testimonials[currentIndex].image}
                       alt={testimonials[currentIndex].name}
@@ -133,7 +133,7 @@ const TestimonialsSection = () => {
                 </div>
 
                 {/* Stats Card */}
-                <div className="bg-white rounded-2xl p-8 shadow-lg">
+                <div className="bg-white rounded-2xl mr-10 p-8 shadow-lg">
                   <div className="text-center">
                     <div className="text-4xl font-bold text-green-600 mb-2">
                       {testimonials[currentIndex].amount}

@@ -101,7 +101,6 @@ const Footer = () => {
                 { href: '/reviews', label: 'Customer Reviews' },
                 { href: '/faq', label: 'FAQ' },
                 { href: '/about', label: 'About Us' },
-                { href: '/blog', label: 'Blog' },
                 { href: '/resources', label: 'Resources' },
                 { href: '/contact', label: 'Contact' },
               ].map((link) => (

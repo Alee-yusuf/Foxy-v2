@@ -2,7 +2,7 @@
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Shield, Heart, TrendingUp, Users, Award, CheckCircle } from 'lucide-react';
+import { Shield, Heart, TrendingUp, Users, Award, CheckCircle, Home, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -410,8 +410,15 @@ export default function About() {
                   Get Your Fair Cash Offer
                 </Link>
               </Button>
-              <div className="mt-6 text-gray-500">
-                🏠 No obligation • ⚡ 24-hour response • 🛡️ $2,500 guarantee
+              <div className="mt-6 text-gray-500 flex items-center justify-center gap-2">
+                <Home className="w-4 h-4 text-blue-400" />
+                <span>No obligation</span>
+                <span>•</span>
+                <Zap className="w-4 h-4 text-blue-400" />
+                <span>24-hour response</span>
+                <span>•</span>
+                <Shield className="w-4 h-4 text-blue-400" />
+                <span>$2,500 guarantee</span>
               </div>
             </motion.div>
           </div>

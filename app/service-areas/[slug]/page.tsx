@@ -235,7 +235,7 @@ export default function AreaPage({ params }: { params: { slug: string } }) {
                 <p className="text-gray-600 mb-4">No pressure. No obligations. Just straight answers for {area.name} homeowners.</p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Button className="cta-gradient text-white" asChild>
-                    <Link href="/contact">Request my offer</Link>
+                    <Link href="/sell-your-house">Request my offer</Link>
                   </Button>
                   <Button variant="outline" className="bg-white text-blue-700 border-white hover:bg-blue-100" asChild>
                     <a href="tel:+18664043664" className="flex items-center"><Phone className="w-4 h-4 mr-2"/>Call us</a>
