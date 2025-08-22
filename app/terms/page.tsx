@@ -90,10 +90,9 @@ export default function TermsOfService() {
             If you have any questions about these Terms, please contact us at:
           </p>
           <p>
-            Foxy Home Buyer LLC<br />
-            Riverview, FL 33578<br />
-            Email: legal@foxyhomebuyer.com<br />
-            Phone: (813) 555-CASH
+            2908 W Bay to Bay Blvd, Tampa, FL 33629<br />
+            Email: info@foxyhomebuyer.com<br />
+            Phone: +1 (866) 404-3664
           </p>
         </section>
       </div>

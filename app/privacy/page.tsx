@@ -9,7 +9,7 @@ export default function PrivacyPolicy() {
   return (
     <main className="container mx-auto px-4 py-12 max-w-4xl">
       <h1 className="text-3xl font-display font-bold mb-6">Privacy Policy</h1>
-      <p className="text-gray-600 mb-8">Last Updated: August 4, 2024</p>
+      <p className="text-gray-600 mb-8">Last Updated: August 4, 2025</p>
       
       <div className="prose max-w-none">
         <section className="mb-8">
@@ -76,10 +76,9 @@ export default function PrivacyPolicy() {
             If you have any questions about this Privacy Policy, please contact us at:
           </p>
           <p>
-            Foxy Home Buyer LLC<br />
-            Riverview, FL 33578<br />
-            Email: privacy@foxyhomebuyer.com<br />
-            Phone: (813) 555-CASH
+            2908 W Bay to Bay Blvd, Tampa, FL 33629<br />
+            Email: info@foxyhomebuyer.com<br />
+            Phone: +1 (866) 404-3664
           </p>
         </section>
       </div>
