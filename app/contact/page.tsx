@@ -51,7 +51,10 @@ export default function Contact() {
         propertyAddress: formData.propertyAddress,
         contactMethod: formData.contactMethod,
         message: formData.message,
+<<<<<<< HEAD
         to_email: 'offers@foxyhomebuyer.com',
+=======
+>>>>>>> 57263f20a272b3889aa7a03652afe55f350f9d6c
         submission_time: new Date().toLocaleString('en-US', {
           timeZone: 'America/New_York',
           year: 'numeric',
@@ -115,9 +118,15 @@ export default function Contact() {
       icon: Mail,
       title: 'Email Us',
       subtitle: 'Send us a message',
+<<<<<<< HEAD
       info: 'offers@foxyhomebuyer.com.',
       description: 'We respond within 2 hours',
       action: 'mailto:offers@foxyhomebuyer.com.',
+=======
+      info: 'info@foxyhomebuyer.com',
+      description: 'We respond within 2 hours',
+      action: 'mailto:info@foxyhomebuyer.com',
+>>>>>>> 57263f20a272b3889aa7a03652afe55f350f9d6c
       buttonText: 'Send Email'
     },
     {
@@ -526,4 +535,8 @@ export default function Contact() {
       <Footer />
     </>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 57263f20a272b3889aa7a03652afe55f350f9d6c

@@ -89,9 +89,14 @@ export default function TermsOfService() {
           <p className="mb-4">
             If you have any questions about these Terms, please contact us at:
           </p>
-          <p>
-            2908 W Bay to Bay Blvd, Tampa, FL 33629<br />
-            Email: offers@foxyhomebuyer.com<br />
+            Email: info@foxyhomebuyer.com<br />
+>>>>>>> 57263f20a272b3889aa7a03652afe55f350f9d6c
+            Phone: +1 (866) 404-3664
+          </p>
+=======
+=======
+            Email: info@foxyhomebuyer.com<br />
+>>>>>>> 57263f20a272b3889aa7a03652afe55f350f9d6c
             Phone: +1 (866) 404-3664
           </p>
         </section>

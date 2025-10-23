@@ -25,7 +25,12 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center pt-24 md:pt-0">
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+>>>>>>> 57263f20a272b3889aa7a03652afe55f350f9d6c
+=======
+=======
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+>>>>>>> 57263f20a272b3889aa7a03652afe55f350f9d6c
       {/* Animated Background */}
       <div className="absolute inset-0 hero-gradient">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -55,7 +60,12 @@ const HeroSection = () => {
         />
       </div>
 
-      <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
+      <div className="container top-20 bottom-20  mx-auto px-4 relative z-10">
+>>>>>>> 57263f20a272b3889aa7a03652afe55f350f9d6c
+=======
+=======
+      <div className="container top-20 bottom-20  mx-auto px-4 relative z-10">
+>>>>>>> 57263f20a272b3889aa7a03652afe55f350f9d6c
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Hero Content */}
           <motion.div
@@ -72,7 +82,12 @@ const HeroSection = () => {
               className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6"
             >
               <Brain className="w-4 h-4 mr-2 text-green-400" />
-              <span className="text-sm font-medium">Florida's Smartest Home Buyer</span>
+              <span className="text-sm font-medium">Tampa's Smartest Home Buyer</span>
+>>>>>>> 57263f20a272b3889aa7a03652afe55f350f9d6c
+=======
+=======
+              <span className="text-sm font-medium">Tampa's Smartest Home Buyer</span>
+>>>>>>> 57263f20a272b3889aa7a03652afe55f350f9d6c
             </motion.div>
 
             {/* Main Headline */}
@@ -214,3 +229,8 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+>>>>>>> 57263f20a272b3889aa7a03652afe55f350f9d6c
+=======
+=======
+export default HeroSection;
+>>>>>>> 57263f20a272b3889aa7a03652afe55f350f9d6c

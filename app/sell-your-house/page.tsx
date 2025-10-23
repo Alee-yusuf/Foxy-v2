@@ -113,7 +113,11 @@ export default function SellYourHouse() {
         situation: formData.situation,
         timeline: formData.timeline,
         additionalInfo: formData.additionalInfo,
-        to_email: 'offers@foxyhomebuyer.com',
+>>>>>>> 57263f20a272b3889aa7a03652afe55f350f9d6c
+        submission_time: new Date().toLocaleString('en-US', {
+=======
+=======
+>>>>>>> 57263f20a272b3889aa7a03652afe55f350f9d6c
         submission_time: new Date().toLocaleString('en-US', {
           timeZone: 'America/New_York',
           year: 'numeric',

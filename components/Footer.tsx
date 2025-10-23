@@ -146,14 +146,27 @@ const Footer = () => {
                   <div className="text-sm text-gray-300">24/7 Hotline</div>
                 </div>
               </a>
-              <a
-                href="mailto:offers@foxyhomebuyer.com"
-                aria-label="Email Foxy Home Buyer at offers@foxyhomebuyer.com"
+                href="mailto:info@foxyhomebuyer.com"
+                aria-label="Email Foxy Home Buyer at info@foxyhomebuyer.com"
+>>>>>>> 57263f20a272b3889aa7a03652afe55f350f9d6c
+                className="flex items-center space-x-3 hover:text-white transition-colors"
+              >
+=======
+=======
+                href="mailto:info@foxyhomebuyer.com"
+                aria-label="Email Foxy Home Buyer at info@foxyhomebuyer.com"
+>>>>>>> 57263f20a272b3889aa7a03652afe55f350f9d6c
                 className="flex items-center space-x-3 hover:text-white transition-colors"
               >
                 <Mail className="w-5 h-5 text-blue-400" />
-                <div>
-                  <div>offers@foxyhomebuyer.com</div>
+                  <div>info@foxyhomebuyer.com</div>
+>>>>>>> 57263f20a272b3889aa7a03652afe55f350f9d6c
+                  <div className="text-sm text-gray-300">Fast Response</div>
+                </div>
+=======
+=======
+                  <div>info@foxyhomebuyer.com</div>
+>>>>>>> 57263f20a272b3889aa7a03652afe55f350f9d6c
                   <div className="text-sm text-gray-300">Fast Response</div>
                 </div>
               </a>

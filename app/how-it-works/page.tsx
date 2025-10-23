@@ -22,31 +22,53 @@ export default function HowItWorks() {
       ],
       timeframe: '3 minutes'
     },
-    {
-      number: 2,
-      icon: FileText,
-      title: 'Offer Calculation',
+      title: 'Property Evaluation',
       description: 'We research your property and local market to prepare a fair cash offer.',
       details: [
-        'Review recent property data',
-        'Estimate Repair Costs',
-        'Set Property Potential Value',
-        'Get Cash Offer Estimate'
+        'Market analysis and comparable sales',
+        'Property condition assessment',
+        'Repair cost calculations',
+        'Fair market value determination'
       ],
-      timeframe: '9 minutes'
+      timeframe: '24 hours'
+>>>>>>> 57263f20a272b3889aa7a03652afe55f350f9d6c
     },
-    {
-      number: 3,
-      icon: DollarSign,
-      title: 'Lock in Your Offer',
+=======
+=======
+      title: 'Property Evaluation',
+      description: 'We research your property and local market to prepare a fair cash offer.',
+      details: [
+        'Market analysis and comparable sales',
+        'Property condition assessment',
+        'Repair cost calculations',
+        'Fair market value determination'
+      ],
+      timeframe: '24 hours'
+>>>>>>> 57263f20a272b3889aa7a03652afe55f350f9d6c
+    },
+      title: 'Cash Offer Presentation',
       description: 'Receive your written cash offer with no obligation to accept.',
       details: [
-        'Review Offer Details',
-        'Select Best Offer Option',
-        'Set Up Property Visit',
-        'Sign Your Paperwork'
+        'Detailed written offer',
+        'Explanation of our process',
+        'Flexible closing timeline',
+        'No pressure decision making'
       ],
-      timeframe: 'Within 24 hours'
+      timeframe: '1-2 days'
+>>>>>>> 57263f20a272b3889aa7a03652afe55f350f9d6c
+    },
+=======
+=======
+      title: 'Cash Offer Presentation',
+      description: 'Receive your written cash offer with no obligation to accept.',
+      details: [
+        'Detailed written offer',
+        'Explanation of our process',
+        'Flexible closing timeline',
+        'No pressure decision making'
+      ],
+      timeframe: '1-2 days'
+>>>>>>> 57263f20a272b3889aa7a03652afe55f350f9d6c
     },
     {
       number: 4,
